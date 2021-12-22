@@ -1,7 +1,6 @@
 package co.com.sofka.producto.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.producto.Precio;
 import co.com.sofka.producto.values.FechaVigencia;
 import co.com.sofka.producto.values.PrecioId;
 import co.com.sofka.producto.values.Valor;

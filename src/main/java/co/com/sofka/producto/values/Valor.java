@@ -10,7 +10,7 @@ public class Valor implements ValueObject<Double> {
 
     public Valor(Double value) {
         this.value = Objects.requireNonNull(value);
-        if(this.value <= 0){
+        if (this.value <= 0) {
             throw new IllegalArgumentException("El precio de un producto no puede tener un valor menor o igual a cero");
         }
     }

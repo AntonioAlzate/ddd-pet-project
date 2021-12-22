@@ -16,8 +16,8 @@ public class VendedorChange extends EventChange {
             vendedor.registroDespacho = event.getRegistroDespacho();
         });
 
-        apply((EstadoVendedorActualizado event)->{
-            if(vendedor.estado.equals(event.getEstado())){
+        apply((EstadoVendedorActualizado event) -> {
+            if (vendedor.estado.equals(event.getEstado())) {
                 throw new IllegalArgumentException("El estado que intentas asignar es igual al actual");
             }
 

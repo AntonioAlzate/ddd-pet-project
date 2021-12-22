@@ -15,7 +15,7 @@ public class AgregarDetalleVentaCommand extends Command {
     private final Cantidad cantidad;
     private final PrecioTotal precioTotal;
 
-    public AgregarDetalleVentaCommand(VentaId ventaId, DetalleVentaId entityId, ProductoId productoId, Cantidad cantidad, PrecioTotal precioTotal){
+    public AgregarDetalleVentaCommand(VentaId ventaId, DetalleVentaId entityId, ProductoId productoId, Cantidad cantidad, PrecioTotal precioTotal) {
 
         this.ventaId = ventaId;
         this.entityId = entityId;

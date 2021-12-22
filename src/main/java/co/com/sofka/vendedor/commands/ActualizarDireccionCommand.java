@@ -9,7 +9,7 @@ public class ActualizarDireccionCommand extends Command {
     private final VendedorId vendedorId;
     private final Direccion direccion;
 
-    public ActualizarDireccionCommand(VendedorId vendedorId, Direccion direccion){
+    public ActualizarDireccionCommand(VendedorId vendedorId, Direccion direccion) {
 
         this.vendedorId = vendedorId;
         this.direccion = direccion;

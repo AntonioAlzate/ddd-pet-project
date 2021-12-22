@@ -15,7 +15,7 @@ public class AgregarReferenciaCommand extends Command {
     private final Telefono telefono;
     private final Parentesco parentesco;
 
-    public AgregarReferenciaCommand(ClienteId clienteId, ReferenciaId entityId, Nombre nombre, Telefono telefono, Parentesco parentesco){
+    public AgregarReferenciaCommand(ClienteId clienteId, ReferenciaId entityId, Nombre nombre, Telefono telefono, Parentesco parentesco) {
 
         this.clienteId = clienteId;
         this.entityId = entityId;

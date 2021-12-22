@@ -9,7 +9,7 @@ public class ActualizarCupoCuentaCommand extends Command {
     private final ClienteId clienteId;
     private final Cupo cupo;
 
-    public ActualizarCupoCuentaCommand(ClienteId clienteId, Cupo cupo){
+    public ActualizarCupoCuentaCommand(ClienteId clienteId, Cupo cupo) {
 
         this.clienteId = clienteId;
         this.cupo = cupo;

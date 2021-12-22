@@ -11,7 +11,7 @@ public class SaldoDeuda implements ValueObject<Double> {
 
     public SaldoDeuda(Double value) {
         Objects.requireNonNull(value);
-        if(value < 0)
+        if (value < 0)
             throw new IllegalArgumentException("El valor del saldoDeuda no puede ser menor a cero");
 
         this.value = value;

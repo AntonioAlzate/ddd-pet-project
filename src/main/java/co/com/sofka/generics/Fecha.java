@@ -9,9 +9,9 @@ public class Fecha implements ValueObject<LocalDate> {
 
     private final LocalDate fecha;
 
-    public Fecha(LocalDate fecha){
+    public Fecha(LocalDate fecha) {
         Objects.requireNonNull(fecha, "La fecha es requerida");
-        if(fecha.isBefore(LocalDate.now())){
+        if (fecha.isBefore(LocalDate.now())) {
             throw new IllegalArgumentException("No se puede crear un despacho con una fecha del pasado");
         }
 

@@ -1,10 +1,10 @@
 package co.com.sofka.vendedor;
 
+import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.generics.Direccion;
-import co.com.sofka.generics.PersonaId;
-import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.generics.Estado;
+import co.com.sofka.generics.PersonaId;
 import co.com.sofka.vendedor.events.DireccionVendedorActualizada;
 import co.com.sofka.vendedor.events.EstadoVendedorActualizado;
 import co.com.sofka.vendedor.events.VendedorCreado;
@@ -26,27 +26,27 @@ public class Vendedor extends AggregateEvent<VendedorId> {
         Objects.requireNonNull(registroDespacho, "el registro de despacho es requerido");
         Objects.requireNonNull(direccion, "la direccion es requerida");
 
-        appendChange(new VendedorCreado(entityId,personaId, registroDespacho, direccion)).apply();
+        appendChange(new VendedorCreado(entityId, personaId, registroDespacho, direccion)).apply();
     }
 
-    private Vendedor(VendedorId entityId){
+    private Vendedor(VendedorId entityId) {
         super(entityId);
         subscribe(new VendedorChange(this));
     }
 
-    public static Vendedor from(VendedorId vendedorId, List<DomainEvent> event){
+    public static Vendedor from(VendedorId vendedorId, List<DomainEvent> event) {
         var vendedor = new Vendedor(vendedorId);
         event.forEach(vendedor::applyEvent);
         return vendedor;
     }
 
-    public void cambiarEstado(Estado estado){
+    public void cambiarEstado(Estado estado) {
         Objects.requireNonNull(estado);
 
         appendChange(new EstadoVendedorActualizado(estado)).apply();
     }
 
-    public void actualizarDireccion(Direccion direccion){
+    public void actualizarDireccion(Direccion direccion) {
         Objects.requireNonNull(direccion);
 
         appendChange(new DireccionVendedorActualizada(direccion)).apply();

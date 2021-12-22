@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.Identity;
 
 public class VendedorId extends Identity {
 
-    public VendedorId(){
+    public VendedorId() {
 
     }
 
@@ -12,7 +12,7 @@ public class VendedorId extends Identity {
         super(id);
     }
 
-    public static VendedorId of(String id){
+    public static VendedorId of(String id) {
         return new VendedorId(id);
     }
 

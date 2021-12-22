@@ -4,15 +4,15 @@ import co.com.sofka.domain.generic.Identity;
 
 public class BodegaId extends Identity {
 
-    public BodegaId(){
+    public BodegaId() {
 
     }
 
-    private BodegaId(String id){
+    private BodegaId(String id) {
         super(id);
     }
 
-    public static BodegaId of(String id){
+    public static BodegaId of(String id) {
         return new BodegaId(id);
     }
 }

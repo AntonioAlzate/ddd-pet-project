@@ -11,7 +11,7 @@ public class FormaPago implements ValueObject<FormaPago.Propeties> {
     private final Modalidad modalidad;
     private final Periodicidad periodicidad;
 
-    public FormaPago(Modalidad modalidad, Periodicidad periodicidad){
+    public FormaPago(Modalidad modalidad, Periodicidad periodicidad) {
         this.modalidad = Objects.requireNonNull(modalidad);
         this.periodicidad = Objects.requireNonNull(periodicidad);
     }
@@ -46,6 +46,7 @@ public class FormaPago implements ValueObject<FormaPago.Propeties> {
 
     public interface Propeties {
         Modalidad modalidad();
+
         Periodicidad periodicidad();
     }
 }

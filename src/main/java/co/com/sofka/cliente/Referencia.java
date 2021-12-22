@@ -1,7 +1,7 @@
 package co.com.sofka.cliente;
 
-import co.com.sofka.cliente.values.Nombre;
 import co.com.sofka.cliente.enums.Parentesco;
+import co.com.sofka.cliente.values.Nombre;
 import co.com.sofka.cliente.values.ReferenciaId;
 import co.com.sofka.cliente.values.Telefono;
 import co.com.sofka.domain.generic.Entity;
@@ -21,16 +21,16 @@ public class Referencia extends Entity<ReferenciaId> {
         this.parentesco = Objects.requireNonNull(parentesco);
     }
 
-    public void actualizarTelefono(Telefono telefono){
+    public void actualizarTelefono(Telefono telefono) {
         Objects.requireNonNull(telefono, "el telefono no puede ser null");
 
     }
 
-    public void actualizarNombre(Nombre nombre){
+    public void actualizarNombre(Nombre nombre) {
         this.nombre = Objects.requireNonNull(nombre);
     }
 
-    public void actualizarParentesco(Parentesco parentesco){
+    public void actualizarParentesco(Parentesco parentesco) {
         this.parentesco = Objects.requireNonNull(parentesco);
     }
 

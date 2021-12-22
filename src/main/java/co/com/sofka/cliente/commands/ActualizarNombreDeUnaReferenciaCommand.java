@@ -11,7 +11,7 @@ public class ActualizarNombreDeUnaReferenciaCommand extends Command {
     private final ReferenciaId referenciaId;
     private final Nombre nombre;
 
-    public ActualizarNombreDeUnaReferenciaCommand(ClienteId clienteId, ReferenciaId referenciaId, Nombre nombre){
+    public ActualizarNombreDeUnaReferenciaCommand(ClienteId clienteId, ReferenciaId referenciaId, Nombre nombre) {
 
         this.clienteId = clienteId;
         this.referenciaId = referenciaId;

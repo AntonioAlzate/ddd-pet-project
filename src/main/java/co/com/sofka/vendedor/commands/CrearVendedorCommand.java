@@ -13,7 +13,7 @@ public class CrearVendedorCommand extends Command {
     private final RegistroDespacho registroDespacho;
     private final Direccion direccion;
 
-    public CrearVendedorCommand(VendedorId entityId, PersonaId personaId, RegistroDespacho registroDespacho, Direccion direccion){
+    public CrearVendedorCommand(VendedorId entityId, PersonaId personaId, RegistroDespacho registroDespacho, Direccion direccion) {
 
         this.entityId = entityId;
         this.personaId = personaId;

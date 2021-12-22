@@ -9,7 +9,7 @@ public class CambiarEstadoCommand extends Command {
     private final VendedorId vendedorId;
     private final Estado estado;
 
-    public CambiarEstadoCommand(VendedorId vendedorId, Estado estado){
+    public CambiarEstadoCommand(VendedorId vendedorId, Estado estado) {
 
         this.vendedorId = vendedorId;
         this.estado = estado;

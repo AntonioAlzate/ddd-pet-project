@@ -11,7 +11,7 @@ public class ActualizarParentezcoDeUnaReferenciaCommand extends Command {
     private final ReferenciaId referenciaId;
     private final Parentesco parentesco;
 
-    public ActualizarParentezcoDeUnaReferenciaCommand(ClienteId clienteId, ReferenciaId referenciaId, Parentesco parentesco){
+    public ActualizarParentezcoDeUnaReferenciaCommand(ClienteId clienteId, ReferenciaId referenciaId, Parentesco parentesco) {
 
         this.clienteId = clienteId;
         this.referenciaId = referenciaId;

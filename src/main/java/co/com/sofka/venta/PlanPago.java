@@ -6,7 +6,6 @@ import co.com.sofka.venta.enums.Periodicidad;
 import co.com.sofka.venta.values.*;
 
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -25,7 +24,7 @@ public class PlanPago extends Entity<PlanPagoId> {
         generarCuotas(cuotaInicial, valorTotal, formaPago);
     }
 
-    public void generarCuotas(CuotaInicial cuotaInicial, Double valorTotal, FormaPago formaPago){
+    public void generarCuotas(CuotaInicial cuotaInicial, Double valorTotal, FormaPago formaPago) {
         Objects.requireNonNull(cuotaInicial);
         Objects.requireNonNull(valorTotal);
 
@@ -36,32 +35,32 @@ public class PlanPago extends Entity<PlanPagoId> {
         var valorQuincena = 15000D;
         var valorMensual = 25000D;
 
-        if(periodicidad == Periodicidad.SEMANAL){
-            while (valor > 0){
+        if (periodicidad == Periodicidad.SEMANAL) {
+            while (valor > 0) {
                 var valorAdd = valor - valorSemana > 0 ? valorSemana : valor;
                 cuotas.add(new Cuota(new CuotaId(), valorAdd, fecha, null));
 
-                valor-=valorSemana;
+                valor -= valorSemana;
                 fecha.plusDays(7);
             }
         }
 
-        if(periodicidad == Periodicidad.QUINCENAL){
-            while (valor > 0){
+        if (periodicidad == Periodicidad.QUINCENAL) {
+            while (valor > 0) {
                 var valorAdd = valor - valorQuincena > 0 ? valorQuincena : valor;
                 cuotas.add(new Cuota(new CuotaId(), valorAdd, fecha, null));
 
-                valor-=valorQuincena;
+                valor -= valorQuincena;
                 fecha.plusDays(15);
             }
         }
 
-        if(periodicidad == Periodicidad.MENSUAL){
-            while (valor > 0){
+        if (periodicidad == Periodicidad.MENSUAL) {
+            while (valor > 0) {
                 var valorAdd = valor - valorSemana > 0 ? valorMensual : valor;
                 cuotas.add(new Cuota(new CuotaId(), valorAdd, fecha, null));
 
-                valor-=valorSemana;
+                valor -= valorSemana;
                 fecha.plusDays(30);
             }
         }

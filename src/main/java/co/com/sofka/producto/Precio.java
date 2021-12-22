@@ -1,7 +1,7 @@
 package co.com.sofka.producto;
 
-import co.com.sofka.generics.Estado;
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofka.generics.Estado;
 import co.com.sofka.producto.values.FechaVigencia;
 import co.com.sofka.producto.values.PrecioId;
 import co.com.sofka.producto.values.Valor;
@@ -21,16 +21,16 @@ public class Precio extends Entity<PrecioId> {
         this.estado = Estado.ACTIVO;
     }
 
-    public void cambiarEstadoPrecio(Estado estado){
+    public void cambiarEstadoPrecio(Estado estado) {
         this.estado = Objects.requireNonNull(estado, "el estado es requerido");
     }
 
-    public void cambiarFechaVigencia(FechaVigencia fechaVigencia){
+    public void cambiarFechaVigencia(FechaVigencia fechaVigencia) {
         Objects.requireNonNull(fechaVigencia);
-        if(this.fechaVigencia == fechaVigencia){
+        if (this.fechaVigencia == fechaVigencia) {
             throw new IllegalArgumentException("La fecha que intenta poner es la misma que se encuentra actualmente");
         }
-        if(fechaVigencia.value().fechaInicio().isAfter(fechaVigencia.value().fechaFin())){
+        if (fechaVigencia.value().fechaInicio().isAfter(fechaVigencia.value().fechaFin())) {
             throw new IllegalArgumentException("La fecha de inicio no puede ser mayor a la fecha de fin");
         }
 

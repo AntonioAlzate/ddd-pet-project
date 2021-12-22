@@ -6,8 +6,8 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.generics.Fecha;
 import co.com.sofka.producto.values.ProductoId;
 import co.com.sofka.vendedor.values.VendedorId;
-import co.com.sofka.venta.events.PlanPagoGenerado;
 import co.com.sofka.venta.events.DetalleVentaAgregado;
+import co.com.sofka.venta.events.PlanPagoGenerado;
 import co.com.sofka.venta.events.VentaCreada;
 import co.com.sofka.venta.values.*;
 
@@ -31,7 +31,7 @@ public class Venta extends AggregateEvent<VentaId> {
         appendChange(new VentaCreada(clienteId, vendedorId)).apply();
     }
 
-    private Venta(VentaId ventaId){
+    private Venta(VentaId ventaId) {
         super(ventaId);
         subscribe(new VentaChange(this));
     }
@@ -42,16 +42,16 @@ public class Venta extends AggregateEvent<VentaId> {
         return venta;
     }
 
-    public void agregarDetalleVenta(DetalleVentaId entityId, ProductoId productoId, Cantidad cantidad, PrecioTotal precioTotal){
+    public void agregarDetalleVenta(DetalleVentaId entityId, ProductoId productoId, Cantidad cantidad, PrecioTotal precioTotal) {
         Objects.requireNonNull(entityId, "detalle de venta id es requerido");
         Objects.requireNonNull(productoId, "el producto id es requerido");
         Objects.requireNonNull(cantidad, "la cantidad es requerida");
         Objects.requireNonNull(precioTotal, "el precio total es requerido");
 
-        appendChange(new DetalleVentaAgregado( entityId,  productoId,  cantidad,  precioTotal)).apply();
+        appendChange(new DetalleVentaAgregado(entityId, productoId, cantidad, precioTotal)).apply();
     }
 
-    public void generarPlanPago(PlanPagoId entityId, CuotaInicial cuotaInicial, Double valorTotal, FormaPago formaPago){
+    public void generarPlanPago(PlanPagoId entityId, CuotaInicial cuotaInicial, Double valorTotal, FormaPago formaPago) {
         Objects.requireNonNull(cuotaInicial, "cuota inicial requerida");
         Objects.requireNonNull(valorTotal, "valor total requerido");
         Objects.requireNonNull(formaPago, "la forma de pago es requerida");

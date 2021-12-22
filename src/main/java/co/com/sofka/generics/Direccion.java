@@ -13,7 +13,7 @@ public class Direccion implements ValueObject<Direccion.Properties> {
         this.direccion = Objects.requireNonNull(direccion, "la dirección es requerida");
         this.caracteristica = Objects.requireNonNull(caracteristica, "la caracteristica es requerida");
 
-        if(direccion.isBlank()){
+        if (direccion.isBlank()) {
             throw new IllegalArgumentException("la dirección no puede estás vacia");
         }
     }
@@ -48,6 +48,7 @@ public class Direccion implements ValueObject<Direccion.Properties> {
 
     public interface Properties {
         String direccion();
+
         String caracteristica();
     }
 }

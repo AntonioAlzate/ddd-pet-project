@@ -13,7 +13,7 @@ public class CrearProductoCommand extends Command {
     private final Categoria categoria;
     private final Precio precio;
 
-    public CrearProductoCommand(ProductoId entityId, BodegaId bodegaId, Categoria categoria, Precio precio){
+    public CrearProductoCommand(ProductoId entityId, BodegaId bodegaId, Categoria categoria, Precio precio) {
 
         this.entityId = entityId;
         this.bodegaId = bodegaId;

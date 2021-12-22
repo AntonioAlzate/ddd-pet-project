@@ -9,7 +9,7 @@ public class ActualizarCategoriaCommand extends Command {
     private final ProductoId productoId;
     private final Categoria categoria;
 
-    public ActualizarCategoriaCommand(ProductoId productoId, Categoria categoria){
+    public ActualizarCategoriaCommand(ProductoId productoId, Categoria categoria) {
 
         this.productoId = productoId;
         this.categoria = categoria;

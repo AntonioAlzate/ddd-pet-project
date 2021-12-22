@@ -1,7 +1,6 @@
 package co.com.sofka.venta.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.venta.PlanPago;
 import co.com.sofka.venta.values.CuotaInicial;
 import co.com.sofka.venta.values.FormaPago;
 import co.com.sofka.venta.values.PlanPagoId;

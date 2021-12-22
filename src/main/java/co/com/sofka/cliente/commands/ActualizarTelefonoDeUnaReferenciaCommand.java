@@ -11,7 +11,7 @@ public class ActualizarTelefonoDeUnaReferenciaCommand extends Command {
     private final ReferenciaId referenciaId;
     private final Telefono telefono;
 
-    public ActualizarTelefonoDeUnaReferenciaCommand(ClienteId clienteId, ReferenciaId referenciaId, Telefono telefono){
+    public ActualizarTelefonoDeUnaReferenciaCommand(ClienteId clienteId, ReferenciaId referenciaId, Telefono telefono) {
 
         this.clienteId = clienteId;
         this.referenciaId = referenciaId;

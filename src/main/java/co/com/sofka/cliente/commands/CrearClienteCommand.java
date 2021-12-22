@@ -1,9 +1,9 @@
 package co.com.sofka.cliente.commands;
 
 import co.com.sofka.cliente.values.ClienteId;
+import co.com.sofka.domain.generic.Command;
 import co.com.sofka.generics.Direccion;
 import co.com.sofka.generics.PersonaId;
-import co.com.sofka.domain.generic.Command;
 
 public class CrearClienteCommand extends Command {
 
@@ -11,7 +11,7 @@ public class CrearClienteCommand extends Command {
     private final PersonaId personaId;
     private final Direccion direccion;
 
-    public CrearClienteCommand(ClienteId clienteId, PersonaId personaId, Direccion direccion){
+    public CrearClienteCommand(ClienteId clienteId, PersonaId personaId, Direccion direccion) {
 
         this.clienteId = clienteId;
         this.personaId = personaId;

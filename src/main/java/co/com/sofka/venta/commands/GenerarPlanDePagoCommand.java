@@ -14,7 +14,7 @@ public class GenerarPlanDePagoCommand extends Command {
     private final FormaPago formaPago;
     private final VentaId ventaId;
 
-    public GenerarPlanDePagoCommand(VentaId ventaId, PlanPagoId entityId, CuotaInicial cuotaInicial, Double valorTotal, FormaPago formaPago){
+    public GenerarPlanDePagoCommand(VentaId ventaId, PlanPagoId entityId, CuotaInicial cuotaInicial, Double valorTotal, FormaPago formaPago) {
 
         this.entityId = entityId;
         this.cuotaInicial = cuotaInicial;

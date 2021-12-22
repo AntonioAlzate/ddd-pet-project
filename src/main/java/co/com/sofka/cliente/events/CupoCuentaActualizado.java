@@ -1,6 +1,5 @@
 package co.com.sofka.cliente.events;
 
-import co.com.sofka.cliente.values.CuentaId;
 import co.com.sofka.cliente.values.Cupo;
 import co.com.sofka.domain.generic.DomainEvent;
 

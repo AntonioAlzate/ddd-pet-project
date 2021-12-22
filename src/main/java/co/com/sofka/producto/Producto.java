@@ -1,7 +1,5 @@
 package co.com.sofka.producto;
 
-import co.com.sofka.cliente.Referencia;
-import co.com.sofka.cliente.values.ReferenciaId;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.producto.enums.Categoria;
@@ -27,27 +25,27 @@ public class Producto extends AggregateEvent<ProductoId> {
         Objects.requireNonNull(categoria, "La categoria es requerida");
         Objects.requireNonNull(precio, "Se debe establecer el precio inicial");
 
-        appendChange(new ProductoCreado(categoria,precio, bodegaId)).apply();
+        appendChange(new ProductoCreado(categoria, precio, bodegaId)).apply();
     }
 
-    private Producto(ProductoId productoId){
+    private Producto(ProductoId productoId) {
         super(productoId);
         subscribe(new ProductoChange(this));
     }
 
-    public static Producto from(ProductoId productoId, List<DomainEvent> event){
+    public static Producto from(ProductoId productoId, List<DomainEvent> event) {
         var producto = new Producto(productoId);
         event.forEach(producto::applyEvent);
         return producto;
     }
 
-    public void actualizarCategoria(Categoria categoria){
+    public void actualizarCategoria(Categoria categoria) {
         this.categoria = Objects.requireNonNull(categoria, "la categoría es requerida");
 
         appendChange(new CategoriaProductoActualizada(categoria));
     }
 
-    public void agregarPrecio(PrecioId precioId, FechaVigencia fechaVigencia, Valor valor){
+    public void agregarPrecio(PrecioId precioId, FechaVigencia fechaVigencia, Valor valor) {
         Objects.requireNonNull(precioId, "el precio es requerido");
         Objects.requireNonNull(fechaVigencia, "la fecha de vigencia es requerida");
         Objects.requireNonNull(valor, "el valor es requerido");
@@ -55,14 +53,14 @@ public class Producto extends AggregateEvent<ProductoId> {
         appendChange(new PrecioAgregado(precioId, fechaVigencia, valor)).apply();
     }
 
-    public void ActualizarFechaVigenciaDeUnPrecio(PrecioId precioId, FechaVigencia fechaVigencia){
+    public void ActualizarFechaVigenciaDeUnPrecio(PrecioId precioId, FechaVigencia fechaVigencia) {
         Objects.requireNonNull(precioId, "el producto id es requerido");
         Objects.requireNonNull(fechaVigencia, "la fecha de vigencia es requerida");
 
         appendChange(new FechaVigenciaPrecioActualizada(precioId, fechaVigencia)).apply();
     }
 
-    protected Optional<Precio> obtenerPrecioPorId(PrecioId precioId){
+    protected Optional<Precio> obtenerPrecioPorId(PrecioId precioId) {
         return precios
                 .stream()
                 .filter(precio -> precio.identity().equals(precioId))

@@ -1,9 +1,9 @@
 package co.com.sofka.cliente;
 
-import co.com.sofka.generics.Estado;
 import co.com.sofka.cliente.events.*;
 import co.com.sofka.cliente.values.CuentaId;
 import co.com.sofka.domain.generic.EventChange;
+import co.com.sofka.generics.Estado;
 
 import java.util.HashSet;
 
@@ -20,7 +20,7 @@ public class ClienteChange extends EventChange {
 
         apply((ReferenciaAgregada event) -> {
             var numeroReferencias = cliente.referencias.size();
-            if(numeroReferencias == 5){
+            if (numeroReferencias == 5) {
                 throw new IllegalArgumentException("No se pueden agregar más de referencias el maximo son 5");
             }
 

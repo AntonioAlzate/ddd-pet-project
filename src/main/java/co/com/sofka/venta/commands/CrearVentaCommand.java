@@ -11,7 +11,7 @@ public class CrearVentaCommand extends Command {
     private final ClienteId clienteId;
     private final VendedorId vendedorId;
 
-    public CrearVentaCommand(VentaId entityId, ClienteId clienteId, VendedorId vendedorId){
+    public CrearVentaCommand(VentaId entityId, ClienteId clienteId, VendedorId vendedorId) {
 
         this.entityId = entityId;
         this.clienteId = clienteId;

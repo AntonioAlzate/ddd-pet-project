@@ -1,9 +1,9 @@
 package co.com.sofka.vendedor;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofka.generics.Fecha;
 import co.com.sofka.producto.values.ProductoId;
 import co.com.sofka.vendedor.values.Anotacion;
-import co.com.sofka.generics.Fecha;
 import co.com.sofka.vendedor.values.RegistroDespachoId;
 
 import java.util.Map;
@@ -20,32 +20,32 @@ public class RegistroDespacho extends Entity<RegistroDespachoId> {
         super(entityId);
     }
 
-    public void ponerAnotacion (Anotacion anotacion){
+    public void ponerAnotacion(Anotacion anotacion) {
         this.anotacion = Objects.requireNonNull(anotacion);
     }
 
-    public void agregarProductoALlevar(ProductoId productoId, Integer cantidad){
+    public void agregarProductoALlevar(ProductoId productoId, Integer cantidad) {
         Objects.requireNonNull(productoId, "el id producto es necesario");
         Objects.requireNonNull(cantidad, "cantidad es requerido");
-        if(cantidad <= 0)
+        if (cantidad <= 0)
             throw new IllegalArgumentException("La cantidad no puede ser menor o igual a cero");
         productosLlevados.put(productoId, cantidad);
     }
 
-    public void quitarProductoALlevar(ProductoId productoId){
+    public void quitarProductoALlevar(ProductoId productoId) {
         Objects.requireNonNull(productoId, "el id producto es necesario");
         productosLlevados.remove(productoId);
     }
 
-    public void agregarProductoAEntregar(ProductoId productoId, Integer cantidad){
+    public void agregarProductoAEntregar(ProductoId productoId, Integer cantidad) {
         Objects.requireNonNull(productoId, "el id producto es necesario");
         Objects.requireNonNull(cantidad, "cantidad es requerido");
-        if(cantidad <= 0)
+        if (cantidad <= 0)
             throw new IllegalArgumentException("La cantidad no puede ser menor o igual a cero");
         productosEntregar.put(productoId, cantidad);
     }
 
-    public void quitarProductoAEntregar(ProductoId productoId){
+    public void quitarProductoAEntregar(ProductoId productoId) {
         Objects.requireNonNull(productoId, "el id producto es necesario");
         productosEntregar.remove(productoId);
     }

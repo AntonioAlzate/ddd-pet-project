@@ -8,7 +8,7 @@ public class Anotacion implements ValueObject<String> {
 
     private final String anotacion;
 
-    public Anotacion(String anotaciones){
+    public Anotacion(String anotaciones) {
         this.anotacion = Objects.requireNonNull(anotaciones);
     }
 

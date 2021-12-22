@@ -14,7 +14,7 @@ public class FechaVigencia implements ValueObject<FechaVigencia.Properties> {
         this.fechaInicio = Objects.requireNonNull(fechaInicio);
         this.fechaFin = Objects.requireNonNull(fechaFin);
 
-        if(fechaInicio.isAfter(fechaFin)){
+        if (fechaInicio.isAfter(fechaFin)) {
             throw new IllegalArgumentException("La fecha de inicio no puede estar despues que la de fin");
         }
     }
@@ -47,8 +47,9 @@ public class FechaVigencia implements ValueObject<FechaVigencia.Properties> {
         return Objects.hash(fechaInicio, fechaFin);
     }
 
-    public interface Properties{
+    public interface Properties {
         LocalDate fechaInicio();
+
         LocalDate fechaFin();
     }
 }

@@ -12,22 +12,22 @@ public class Nombre implements ValueObject<Nombre.Properties> {
     public Nombre(String nombres, String apellidos) {
         this.nombres = Objects.requireNonNull(nombres);
         this.apellidos = Objects.requireNonNull(apellidos);
-        if (this.nombres.isBlank()){
+        if (this.nombres.isBlank()) {
             throw new IllegalArgumentException("El valor nombres no puede ser vacío");
         }
-        if (this.nombres.length() <= 5){
+        if (this.nombres.length() <= 5) {
             throw new IllegalArgumentException("El valor nombres debe tener mas de 5 caracteres");
         }
-        if (this.nombres.length() >= 100){
+        if (this.nombres.length() >= 100) {
             throw new IllegalArgumentException("El valor nombres debe ser menor a 100 caracteres");
         }
-        if (this.apellidos.isBlank()){
+        if (this.apellidos.isBlank()) {
             throw new IllegalArgumentException("El valor apellidos no puede ser vacío");
         }
-        if (this.apellidos.length() <= 5){
+        if (this.apellidos.length() <= 5) {
             throw new IllegalArgumentException("El valor apellidos debe tener mas de 5 caracteres");
         }
-        if (this.apellidos.length() >= 100){
+        if (this.apellidos.length() >= 100) {
             throw new IllegalArgumentException("El valor apellidos debe ser menor a 100 caracteres");
         }
     }

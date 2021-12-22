@@ -12,10 +12,10 @@ public class Descuento implements ValueObject<Descuento.Properties> {
     public Descuento(String razon, Double valor) {
         this.razon = Objects.requireNonNull(razon, "La razon es requerido");
         this.valor = Objects.requireNonNull(valor, "El valor del descuento es requerido");
-        if(this.valor <= 0){
+        if (this.valor <= 0) {
             throw new IllegalArgumentException("El decunto no puede ser cero o negativo");
         }
-        if(this.razon.isBlank()){
+        if (this.razon.isBlank()) {
             throw new IllegalArgumentException("El valor no puede estar vacio");
         }
     }
@@ -48,8 +48,9 @@ public class Descuento implements ValueObject<Descuento.Properties> {
         return Objects.hash(razon, valor);
     }
 
-    public interface  Properties {
+    public interface Properties {
         String razon();
+
         Double descuento();
     }
 }

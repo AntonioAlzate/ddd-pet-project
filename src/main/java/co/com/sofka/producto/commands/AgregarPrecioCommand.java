@@ -1,9 +1,10 @@
 package co.com.sofka.producto.commands;
 
 import co.com.sofka.domain.generic.Command;
-import co.com.sofka.producto.Precio;
-import co.com.sofka.producto.enums.Categoria;
-import co.com.sofka.producto.values.*;
+import co.com.sofka.producto.values.FechaVigencia;
+import co.com.sofka.producto.values.PrecioId;
+import co.com.sofka.producto.values.ProductoId;
+import co.com.sofka.producto.values.Valor;
 
 public class AgregarPrecioCommand extends Command {
 
@@ -12,7 +13,7 @@ public class AgregarPrecioCommand extends Command {
     private final FechaVigencia fechaVigencia;
     private final Valor valor;
 
-    public AgregarPrecioCommand(ProductoId productoId , PrecioId precioId, FechaVigencia fechaVigencia, Valor valor){
+    public AgregarPrecioCommand(ProductoId productoId, PrecioId precioId, FechaVigencia fechaVigencia, Valor valor) {
 
         this.productoId = productoId;
         this.precioId = precioId;

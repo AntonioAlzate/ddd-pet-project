@@ -3,7 +3,6 @@ package co.com.sofka.producto.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.producto.values.FechaVigencia;
 import co.com.sofka.producto.values.PrecioId;
-import co.com.sofka.producto.values.ProductoId;
 
 public class FechaVigenciaPrecioActualizada extends DomainEvent {
     private final PrecioId precioId;

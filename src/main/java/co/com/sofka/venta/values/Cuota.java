@@ -59,8 +59,11 @@ public class Cuota implements ValueObject<Cuota.Properties> {
 
     public interface Properties {
         CuotaId cuotaId();
+
         Double valor();
+
         LocalDate fechaPropuesta();
+
         LocalDate fechaRealizacion();
     }
 }

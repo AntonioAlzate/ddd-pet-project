@@ -8,15 +8,15 @@ public class PrecioTotal implements ValueObject<Double> {
 
     private final Double valor;
 
-    public PrecioTotal(Double valor){
+    public PrecioTotal(Double valor) {
         Objects.requireNonNull(valor);
-        if(valor <= 0){
-            throw  new IllegalArgumentException("el precio no puede ser menor o igual a cero");
+        if (valor <= 0) {
+            throw new IllegalArgumentException("el precio no puede ser menor o igual a cero");
         }
         this.valor = valor;
     }
 
-    public PrecioTotal aplicarDescuento(Descuento descuento){
+    public PrecioTotal aplicarDescuento(Descuento descuento) {
         return new PrecioTotal(this.valor - this.valor * descuento.value().descuento());
     }
 

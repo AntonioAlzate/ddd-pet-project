@@ -54,7 +54,7 @@ public class ProductoChange extends EventChange {
                     producto.obtenerPrecioPorId(event.getPrecioId())
                             .orElseThrow(() -> new IllegalArgumentException("El precio no existe"));
 
-            if(precioObtenido.estado == Estado.INACTIVO){
+            if (precioObtenido.estado == Estado.INACTIVO) {
                 throw new IllegalArgumentException("No es posible cambiar la fecha de un precio inactivo");
             }
 

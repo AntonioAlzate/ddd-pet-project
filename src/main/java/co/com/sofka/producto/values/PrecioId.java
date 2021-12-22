@@ -4,15 +4,15 @@ import co.com.sofka.domain.generic.Identity;
 
 public class PrecioId extends Identity {
 
-    public PrecioId(){
+    public PrecioId() {
 
     }
 
-    private PrecioId(String id){
+    private PrecioId(String id) {
         super(id);
     }
 
-    public static PrecioId of(String id){
+    public static PrecioId of(String id) {
         return new PrecioId(id);
     }
 }

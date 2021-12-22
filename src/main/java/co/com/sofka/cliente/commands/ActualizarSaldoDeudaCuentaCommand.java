@@ -9,7 +9,7 @@ public class ActualizarSaldoDeudaCuentaCommand extends Command {
     private final ClienteId clienteId;
     private final SaldoDeuda saldoDeuda;
 
-    public ActualizarSaldoDeudaCuentaCommand(ClienteId clienteId, SaldoDeuda saldoDeuda){
+    public ActualizarSaldoDeudaCuentaCommand(ClienteId clienteId, SaldoDeuda saldoDeuda) {
 
         this.clienteId = clienteId;
         this.saldoDeuda = saldoDeuda;

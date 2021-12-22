@@ -10,9 +10,9 @@ public class Telefono implements ValueObject<String> {
 
     public Telefono(String numero) {
         Objects.requireNonNull(numero);
-        if(numero.isBlank() || numero.length() < 6)
+        if (numero.isBlank() || numero.length() < 6)
             throw new IllegalArgumentException("El número de telefono debe tener una longitud mayor a 6");
-        if(numero.length() >= 25)
+        if (numero.length() >= 25)
             throw new IllegalArgumentException("El número de telefono debe ser menor a 25 caracteres");
 
         this.numero = numero;

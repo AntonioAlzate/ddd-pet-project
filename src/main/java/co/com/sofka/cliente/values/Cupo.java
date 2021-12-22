@@ -10,7 +10,7 @@ public class Cupo implements ValueObject<Double> {
 
     public Cupo(Double value) {
         Objects.requireNonNull(value);
-        if(value < 0)
+        if (value < 0)
             throw new IllegalArgumentException("El valor del cupo no puede ser menor a cero");
 
         this.value = value;

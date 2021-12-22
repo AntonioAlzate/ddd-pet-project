@@ -1,8 +1,8 @@
 package co.com.sofka.cliente;
 
+import co.com.sofka.cliente.enums.EstadoCuenta;
 import co.com.sofka.cliente.values.CuentaId;
 import co.com.sofka.cliente.values.Cupo;
-import co.com.sofka.cliente.enums.EstadoCuenta;
 import co.com.sofka.cliente.values.SaldoDeuda;
 import co.com.sofka.domain.generic.Entity;
 
@@ -21,21 +21,21 @@ public class Cuenta extends Entity<CuentaId> {
         this.saldoDeuda = new SaldoDeuda(0D);
     }
 
-    public void cambiarEstadoCuenta(EstadoCuenta estadoCuenta){
+    public void cambiarEstadoCuenta(EstadoCuenta estadoCuenta) {
         this.estadoCuenta = Objects.requireNonNull(estadoCuenta, "El estado de cuenta no puede ser null");
     }
 
-    public void actualizarSaldoDeuda(SaldoDeuda saldoDeuda){
+    public void actualizarSaldoDeuda(SaldoDeuda saldoDeuda) {
         Objects.requireNonNull(saldoDeuda);
-        if(saldoDeuda.value() < 0)
+        if (saldoDeuda.value() < 0)
             throw new IllegalArgumentException("El valor del cupo no puede ser menor a cero");
 
         this.saldoDeuda = saldoDeuda;
     }
 
-    public void actualizarCupo(Cupo cupo){
+    public void actualizarCupo(Cupo cupo) {
         Objects.requireNonNull(cupo);
-        if(cupo.value() < 0)
+        if (cupo.value() < 0)
             throw new IllegalArgumentException("El valor del cupo no puede ser menor a cero");
 
         this.cupo = cupo;

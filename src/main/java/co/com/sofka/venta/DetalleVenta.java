@@ -23,11 +23,11 @@ public class DetalleVenta extends Entity<DetalleVentaId> {
         this.precioTotal = Objects.requireNonNull(precioTotal);
     }
 
-    public void agregarCantidad(Cantidad cantidad){
+    public void agregarCantidad(Cantidad cantidad) {
         this.cantidad = Objects.requireNonNull(cantidad);
     }
 
-    public void aplicarDescuento(Descuento descuento){
+    public void aplicarDescuento(Descuento descuento) {
         Objects.requireNonNull(descuento);
         this.precioTotal = this.precioTotal.aplicarDescuento(descuento);
     }

@@ -10,7 +10,7 @@ public class CuotaInicial implements ValueObject<CuotaInicial.Properties> {
     private final String detalle;
 
     public CuotaInicial(Double valor, String detalle) {
-        if(valor <0){
+        if (valor < 0) {
             throw new IllegalArgumentException("El valor no puede ser menor a cero");
         }
         this.valor = Objects.requireNonNull(valor);
@@ -45,8 +45,9 @@ public class CuotaInicial implements ValueObject<CuotaInicial.Properties> {
         return Objects.hash(valor, detalle);
     }
 
-    public interface Properties{
+    public interface Properties {
         Double valor();
+
         String detalle();
     }
 }
