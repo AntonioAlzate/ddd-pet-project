@@ -1,4 +1,4 @@
-package co.com.sofka.vendedor.values;
+package co.com.sofka.generics;
 
 import co.com.sofka.domain.generic.ValueObject;
 

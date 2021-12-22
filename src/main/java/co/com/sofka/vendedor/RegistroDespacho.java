@@ -2,7 +2,7 @@ package co.com.sofka.vendedor;
 
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.vendedor.values.Anotacion;
-import co.com.sofka.vendedor.values.Fecha;
+import co.com.sofka.generics.Fecha;
 import co.com.sofka.vendedor.values.RegistroDespachoId;
 
 import java.util.Objects;
