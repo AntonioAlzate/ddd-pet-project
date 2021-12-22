@@ -27,7 +27,7 @@ public class Cuenta extends Entity<CuentaId> {
 
     public void actualizarSaldoDeuda(SaldoDeuda saldoDeuda){
         Objects.requireNonNull(saldoDeuda);
-        if(saldoDeuda.getValue() < 0)
+        if(saldoDeuda.value() < 0)
             throw new IllegalArgumentException("El valor del cupo no puede ser menor a cero");
 
         this.saldoDeuda = saldoDeuda;
@@ -35,7 +35,7 @@ public class Cuenta extends Entity<CuentaId> {
 
     public void actualizarCupo(Cupo cupo){
         Objects.requireNonNull(cupo);
-        if(cupo.getValue() < 0)
+        if(cupo.value() < 0)
             throw new IllegalArgumentException("El valor del cupo no puede ser menor a cero");
 
         this.cupo = cupo;

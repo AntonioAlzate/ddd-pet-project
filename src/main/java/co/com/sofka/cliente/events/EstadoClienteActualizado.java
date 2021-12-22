@@ -1,7 +1,6 @@
 package co.com.sofka.cliente.events;
 
-import co.com.sofka.cliente.enums.Estado;
-import co.com.sofka.cliente.values.ClienteId;
+import co.com.sofka.generics.Estado;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class EstadoClienteActualizado extends DomainEvent {

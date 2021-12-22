@@ -3,7 +3,7 @@ package co.com.sofka.cliente;
 import co.com.sofka.cliente.enums.Parentesco;
 import co.com.sofka.cliente.events.*;
 import co.com.sofka.cliente.values.*;
-import co.com.sofka.cliente.enums.Estado;
+import co.com.sofka.generics.Estado;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 
