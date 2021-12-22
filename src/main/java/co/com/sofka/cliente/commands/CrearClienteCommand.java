@@ -1,8 +1,8 @@
 package co.com.sofka.cliente.commands;
 
 import co.com.sofka.cliente.values.ClienteId;
-import co.com.sofka.cliente.values.Direccion;
-import co.com.sofka.cliente.values.PersonaId;
+import co.com.sofka.generics.Direccion;
+import co.com.sofka.generics.PersonaId;
 import co.com.sofka.domain.generic.Command;
 
 public class CrearClienteCommand extends Command {

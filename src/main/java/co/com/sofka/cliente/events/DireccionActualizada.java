@@ -1,7 +1,6 @@
 package co.com.sofka.cliente.events;
 
-import co.com.sofka.cliente.values.ClienteId;
-import co.com.sofka.cliente.values.Direccion;
+import co.com.sofka.generics.Direccion;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class DireccionActualizada extends DomainEvent {

@@ -1,4 +1,4 @@
-package co.com.sofka.cliente.values;
+package co.com.sofka.generics;
 
 import co.com.sofka.domain.generic.Identity;
 
